@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4B4A2C6F-BAFF-4289-8539-38BF9ABF489E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GameGUI</RootNamespace>
+    <AssemblyName>GameGUI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>E:\12th Grade\Computer Science\Distribution Tests\Test 1\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>85E4E08F3FB58755FCD4CD359D2931BDFA1415F4</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>GameGUI_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Game, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Graphics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Help Menus\ConsoleCheats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Help Menus\ConsoleCheats.Designer.cs">
+      <DependentUpon>ConsoleCheats.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Help Menus\ConsoleInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Help Menus\ConsoleInfo.Designer.cs">
+      <DependentUpon>ConsoleInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Help Menus\Credits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Help Menus\Credits.Designer.cs">
+      <DependentUpon>Credits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Help Menus\ForgeInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Help Menus\ForgeInfo.Designer.cs">
+      <DependentUpon>ForgeInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Help Menus\GeneralInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Help Menus\GeneralInfo.Designer.cs">
+      <DependentUpon>GeneralInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Help Menus\MenuHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Help Menus\MenuHelp.Designer.cs">
+      <DependentUpon>MenuHelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InGame.Designer.cs">
+      <DependentUpon>InGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SaveLoadForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaveLoadForm.Designer.cs">
+      <DependentUpon>SaveLoadForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsMenu.Designer.cs">
+      <DependentUpon>SettingsMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StartScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartScreen.Designer.cs">
+      <DependentUpon>StartScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VideoSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VideoSettings.Designer.cs">
+      <DependentUpon>VideoSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WarningMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WarningMessage.Designer.cs">
+      <DependentUpon>WarningMessage.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Help Menus\ConsoleCheats.resx">
+      <DependentUpon>ConsoleCheats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Help Menus\ConsoleInfo.resx">
+      <DependentUpon>ConsoleInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Help Menus\Credits.resx">
+      <DependentUpon>Credits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Help Menus\ForgeInfo.resx">
+      <DependentUpon>ForgeInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Help Menus\GeneralInfo.resx">
+      <DependentUpon>GeneralInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Help Menus\MenuHelp.resx">
+      <DependentUpon>MenuHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InGame.resx">
+      <DependentUpon>InGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SaveLoadForm.resx">
+      <DependentUpon>SaveLoadForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsMenu.resx">
+      <DependentUpon>SettingsMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartScreen.resx">
+      <DependentUpon>StartScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VideoSettings.resx">
+      <DependentUpon>VideoSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WarningMessage.resx">
+      <DependentUpon>WarningMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\School Map001.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Game.ico" />
+    <Content Include="GameGUI.sln" />
+    <Content Include="Help Menus\Keyboard Keys\A.png" />
+    <Content Include="Help Menus\Keyboard Keys\Cntrl.png" />
+    <Content Include="Help Menus\Keyboard Keys\D.png" />
+    <Content Include="Help Menus\Keyboard Keys\E.png" />
+    <Content Include="Help Menus\Keyboard Keys\Enter.png" />
+    <Content Include="Help Menus\Keyboard Keys\Esc.png" />
+    <Content Include="Help Menus\Keyboard Keys\F.png" />
+    <Content Include="Help Menus\Keyboard Keys\F1.png" />
+    <Content Include="Help Menus\Keyboard Keys\F10.png" />
+    <Content Include="Help Menus\Keyboard Keys\F11.png" />
+    <Content Include="Help Menus\Keyboard Keys\F12.png" />
+    <Content Include="Help Menus\Keyboard Keys\F2.png" />
+    <Content Include="Help Menus\Keyboard Keys\F3.png" />
+    <Content Include="Help Menus\Keyboard Keys\F4.png" />
+    <Content Include="Help Menus\Keyboard Keys\F5.png" />
+    <Content Include="Help Menus\Keyboard Keys\Mouse.png" />
+    <Content Include="Help Menus\Keyboard Keys\P.png" />
+    <Content Include="Help Menus\Keyboard Keys\Q.png" />
+    <Content Include="Help Menus\Keyboard Keys\S.png" />
+    <Content Include="Help Menus\Keyboard Keys\Shift.png" />
+    <Content Include="Help Menus\Keyboard Keys\T.png" />
+    <Content Include="Help Menus\Keyboard Keys\W.png" />
+    <Content Include="Help Menus\Keyboard Keys\winkeyboard-leftside.gif" />
+    <Content Include="Help Menus\Reticles\PortalBlue.png" />
+    <Content Include="Help Menus\Reticles\PortalBoth.png" />
+    <Content Include="Help Menus\Reticles\PortalEmpty.png" />
+    <Content Include="Help Menus\Reticles\PortalOrange.png" />
+    <Content Include="Help Menus\Reticles\reticle.png" />
+    <Content Include="Help Menus\Reticles\ReticleBetter.png" />
+    <Content Include="Help Menus\Screenshots\Calculator.JPEG" />
+    <Content Include="Help Menus\Screenshots\Calculator_Small.jpg" />
+    <Content Include="Help Menus\Screenshots\Game Console Small.jpg" />
+    <Content Include="Help Menus\Screenshots\Game Console.JPEG" />
+    <Content Include="Help Menus\Screenshots\Gatsby.JPEG" />
+    <Content Include="Help Menus\Screenshots\Gatsby_Small.JPEG" />
+    <Content Include="Help Menus\Screenshots\GLaDOS Sings.JPEG" />
+    <Content Include="Help Menus\Screenshots\GLaDOS Sings_Small.JPEG" />
+    <Content Include="Help Menus\Screenshots\Guitar App Screen Shot Small.jpg" />
+    <Content Include="Help Menus\Screenshots\Guitar App Screen Shot.jpg" />
+    <Content Include="Help Menus\Screenshots\Intuitive.jpg" />
+    <Content Include="Help Menus\Screenshots\MathGame Screen Shots.bmp" />
+    <Content Include="Help Menus\Screenshots\MathGame Screen Shots_Small.jpg" />
+    <Content Include="Help Menus\Screenshots\Portal Card Game 2.JPG" />
+    <Content Include="Help Menus\Screenshots\Portal Card Game.JPG" />
+    <Content Include="Help Menus\Screenshots\Portal Card Game_Small.JPG" />
+    <Content Include="Help Menus\Screenshots\TempConverter.JPG" />
+    <Content Include="Help Menus\Screenshots\TempConverter_Small.jpg" />
+    <Content Include="Resources\Information Icons\Exclamation.ico" />
+    <Content Include="Resources\Information Icons\Infomark.ico" />
+    <Content Include="Resources\Information Icons\Question.ico" />
+    <Content Include="Resources\Information Icons\RedX.ico" />
+    <None Include="Resources\R.png" />
+    <None Include="Resources\SplashScreenPicture_Side.jpg" />
+    <None Include="Resources\SplashScreenPicture.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

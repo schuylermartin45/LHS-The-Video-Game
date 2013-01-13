@@ -1,0 +1,943 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{385C61CB-BCE1-4D61-8563-CEE270073D07}</ProjectGuid>
+    <ProjectTypeGuids>{96E2B04D-8817-42c6-938A-82C39BA4D311};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <XnaFrameworkVersion>v4.0</XnaFrameworkVersion>
+    <OutputPath>bin\$(Platform)\$(Configuration)</OutputPath>
+    <ContentRootDirectory>Content</ContentRootDirectory>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>Senior_ProjectContent</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.EffectImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.FBXImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.TextureImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.XImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.AudioImporters, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.VideoImporters, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CustomContentPipeline\CustomContentPipeline.csproj">
+      <Project>{3C6D0889-172D-42F8-A67B-20DBA2F197BE}</Project>
+      <Name>CustomContentPipeline</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Effects\blinn_phong.fx">
+      <Name>blinn_phong</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\HighRes\BottleBin.FBX">
+      <Name>BottleBin</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_Scale>0.38</ProcessorParameters_Scale>
+    </Compile>
+    <Compile Include="Models\HighRes\caffelobby.FBX">
+      <Name>caffelobby</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+    </Compile>
+    <Compile Include="Models\HighRes\CleanRoom.FBX">
+      <Name>CleanRoom</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+    </Compile>
+    <Compile Include="Models\HighRes\Door.fbx">
+      <Name>Door</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_Scale>0.5</ProcessorParameters_Scale>
+      <ProcessorParameters_RotationX>-90</ProcessorParameters_RotationX>
+    </Compile>
+    <Compile Include="Models\HighRes\Fan.fbx">
+      <Name>Fan</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_Scale>0.5</ProcessorParameters_Scale>
+    </Compile>
+    <Compile Include="Models\HighRes\FireAlarm.FBX">
+      <Name>FireAlarm</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+    </Compile>
+    <Compile Include="Models\HighRes\ground.fbx">
+      <Name>ground</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+    </Compile>
+    <Compile Include="Models\HighRes\Hallwaystry.FBX">
+      <Name>Hallwaystry</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+    </Compile>
+    <Compile Include="Models\HighRes\HumanRectangle.fbx">
+      <Name>HumanRectangle</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+    </Compile>
+    <Compile Include="Models\HighRes\Light.fbx">
+      <Name>Light</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+    </Compile>
+    <Compile Include="Models\HighRes\newroom.fbx">
+      <Name>newroom</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+    </Compile>
+    <Compile Include="Models\HighRes\OverheadProjector.FBX">
+      <Name>OverheadProjector</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+    </Compile>
+    <Compile Include="Models\HighRes\Person.fbx">
+      <Name>Person</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+    </Compile>
+    <Compile Include="Models\HighRes\Portal Gun FBX.FBX">
+      <Name>Portal Gun FBX</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_Scale>0.01</ProcessorParameters_Scale>
+      <ProcessorParameters_RotationX>90</ProcessorParameters_RotationX>
+    </Compile>
+    <Compile Include="Models\HighRes\SchoolShell.FBX">
+      <Name>SchoolShell</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+    </Compile>
+    <Compile Include="Models\HighRes\SmallComputerCart.FBX">
+      <Name>SmallComputerCart</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_Scale>0.09</ProcessorParameters_Scale>
+    </Compile>
+    <Compile Include="Models\HighRes\studentdesk.fbx">
+      <Name>studentdesk</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_Scale>0.6</ProcessorParameters_Scale>
+    </Compile>
+    <Compile Include="Models\HighRes\SwirlyChair.FBX">
+      <Name>SwirlyChair</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_Scale>1.2</ProcessorParameters_Scale>
+    </Compile>
+    <Compile Include="Models\HighRes\SwirlyChairV2.FBX">
+      <Name>SwirlyChairV2</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_Scale>1.2</ProcessorParameters_Scale>
+    </Compile>
+    <Compile Include="Models\HighRes\teachersdesk.fbx">
+      <Name>teachersdesk</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_Scale>0.15</ProcessorParameters_Scale>
+      <ProcessorParameters_RotationX>-90</ProcessorParameters_RotationX>
+    </Compile>
+    <Compile Include="Models\HighRes\teach_desk.fbx">
+      <Name>teach_desk</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_RotationX>270</ProcessorParameters_RotationX>
+      <ProcessorParameters_Scale>0.15</ProcessorParameters_Scale>
+    </Compile>
+    <Compile Include="Models\HighRes\terrain2.fbx">
+      <Name>terrain2</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+    </Compile>
+    <Compile Include="Models\HighRes\Test\ChrisMurrayTry.fbx">
+      <Name>ChrisMurrayTry</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\HighRes\Test\cube.fbx">
+      <Name>cube</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\HighRes\Test\TestHighRes.fbx">
+      <Name>TestHighRes</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\HighRes\Test\TestLowRes.fbx">
+      <Name>TestLowRes</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\HighRes\wall.FBX">
+      <Name>wall</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+    </Compile>
+    <Compile Include="Textures\brass.tga">
+      <Name>brass</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\copper.tga">
+      <Name>copper</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\Font.spritefont">
+      <Name>Font</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\LowRes\groundLowRes.fbx">
+      <Name>groundLowRes</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+    </Compile>
+    <Compile Include="Models\LowRes\SchoolShellLowRes.FBX">
+      <Name>SchoolShellLowRes</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Sphere</ProcessorParameters_CollisionArg>
+    </Compile>
+    <Compile Include="Textures\steel.tga">
+      <Name>steel</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\LowRes\studentdeskLowRes.fbx">
+      <Name>studentdeskLowRes</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_Scale>0.6</ProcessorParameters_Scale>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\BrickWall.png">
+      <Name>BrickWall</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Carpet3.jpg">
+      <Name>Carpet3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\floor.jpg">
+      <Name>floor</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Reticles\reticle.png">
+      <Name>reticle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\wood.jpg">
+      <Name>wood</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\Hallwaystry.FBX">
+      <Name>Hallwaystry</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\LowRes\cubeLowRes.fbx">
+      <Name>cubeLowRes</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_Scale>50</ProcessorParameters_Scale>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Reticles\ReticleBetter.png">
+      <Name>ReticleBetter</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Ceiling.png">
+      <Name>Ceiling</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\LowRes\SwirlyChairLowRes.FBX">
+      <Name>SwirlyChairLowRes</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_Scale>1.2</ProcessorParameters_Scale>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\LowRes\SmallComputerCartLowRes.FBX">
+      <Name>SmallComputerCartLowRes</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_Scale>0.09</ProcessorParameters_Scale>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\LowRes\OverheadProjectorLowRes.FBX">
+      <Name>OverheadProjectorLowRes</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_Scale>0.02</ProcessorParameters_Scale>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Reticles\PortalBlue.png">
+      <Name>PortalBlue</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Reticles\PortalBoth.png">
+      <Name>PortalBoth</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Reticles\PortalEmpty.png">
+      <Name>PortalEmpty</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\Reticles\PortalOrange.png">
+      <Name>PortalOrange</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\BluePortal.png">
+      <Name>BluePortal</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\OrangePortal.png">
+      <Name>OrangePortal</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\LowRes\FanLowRes.fbx">
+      <Name>FanLowRes</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_Scale>0.5</ProcessorParameters_Scale>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\LowRes\DoorLowRes.fbx">
+      <Name>DoorLowRes</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_RotationX>-90</ProcessorParameters_RotationX>
+      <ProcessorParameters_Scale>0.5</ProcessorParameters_Scale>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\LowRes\CleanRoomLowRes.FBX">
+      <Name>CleanRoomLowRes</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_RotationX>-90</ProcessorParameters_RotationX>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\LowRes\SwirlyChairV2LowRes.FBX">
+      <Name>SwirlyChairV2LowRes</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_Scale>1.2</ProcessorParameters_Scale>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Blank.png">
+      <Name>Blank</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Fonts\Font.spritefont">
+      <Name>Font</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\LowRes\terrain2LowRes.fbx">
+      <Name>terrain2LowRes</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_Scale>10</ProcessorParameters_Scale>
+      <ProcessorParameters_RotationX>270</ProcessorParameters_RotationX>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\LowRes\Portal Gun FBXLowRes.FBX">
+      <Name>Portal Gun FBXLowRes</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_Scale>0.01</ProcessorParameters_Scale>
+      <ProcessorParameters_RotationX>90</ProcessorParameters_RotationX>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\LowRes\newroomLowRes.fbx">
+      <Name>newroomLowRes</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_Scale>0.75</ProcessorParameters_Scale>
+      <ProcessorParameters_RotationX>-90</ProcessorParameters_RotationX>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\LowRes\teach_deskLowRes.fbx">
+      <Name>teach_deskLowRes</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_Scale>0.15</ProcessorParameters_Scale>
+      <ProcessorParameters_RotationX>270</ProcessorParameters_RotationX>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\LowRes\teachersdeskLowRes.fbx">
+      <Name>teachersdeskLowRes</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_RotationX>-90</ProcessorParameters_RotationX>
+      <ProcessorParameters_Scale>0.15</ProcessorParameters_Scale>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\LowRes\wallLowRes.fbx">
+      <Name>wallLowRes</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\LowRes\HallwaystryLowRes.FBX">
+      <Name>HallwaystryLowRes</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\LowRes\Person.fbx">
+      <Name>PersonLowRes</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\LowRes\MonitorLowRes.FBX">
+      <Name>MonitorLowRes</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_Scale>0.2</ProcessorParameters_Scale>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\HighRes\Monitor.FBX">
+      <Name>Monitor</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_Scale>0.2</ProcessorParameters_Scale>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\HighRes\FullHallways.FBX">
+      <Name>FullHallways</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\LowRes\FullHallways.FBX">
+      <Name>FullHallwaysLowRes</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\HighRes\Computer.fbx">
+      <Name>Computer</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_Scale>0.8</ProcessorParameters_Scale>
+      <ProcessorParameters_RotationX>-90</ProcessorParameters_RotationX>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\LowRes\ComputerLowRes.fbx">
+      <Name>ComputerLowRes</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_Scale>0.8</ProcessorParameters_Scale>
+      <ProcessorParameters_RotationX>-90</ProcessorParameters_RotationX>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\LowRes\BottleBinLowRes.FBX">
+      <Name>BottleBinLowRes</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_Scale>0.38</ProcessorParameters_Scale>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\HighRes\toilet.fbx">
+      <Name>toilet</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_Scale>0.75</ProcessorParameters_Scale>
+      <ProcessorParameters_RotationX>-90</ProcessorParameters_RotationX>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\LowRes\toiletLowRes.fbx">
+      <Name>toiletLowRes</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_Scale>0.75</ProcessorParameters_Scale>
+      <ProcessorParameters_RotationX>-90</ProcessorParameters_RotationX>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\HighRes\pencil.fbx">
+      <Name>pencil</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_Scale>0.01</ProcessorParameters_Scale>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\LowRes\pencilLowRes.fbx">
+      <Name>pencilLowRes</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_Scale>0.01</ProcessorParameters_Scale>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\HighRes\downeyschair.fbx">
+      <Name>downeyschair</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_Scale>0.5</ProcessorParameters_Scale>
+      <ProcessorParameters_RotationX>-90</ProcessorParameters_RotationX>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\LowRes\downeyschairLowRes.fbx">
+      <Name>downeyschairLowRes</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_Scale>0.5</ProcessorParameters_Scale>
+      <ProcessorParameters_RotationX>-90</ProcessorParameters_RotationX>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\HighRes\OldCPUs.fbx">
+      <Name>OldCPUs</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_Scale>0.8</ProcessorParameters_Scale>
+      <ProcessorParameters_RotationX>-90</ProcessorParameters_RotationX>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\LowRes\OldCPUsLowRes.fbx">
+      <Name>OldCPUsLowRes</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_Scale>0.8</ProcessorParameters_Scale>
+      <ProcessorParameters_RotationX>-90</ProcessorParameters_RotationX>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\HighRes\OneOldCPU.fbx">
+      <Name>OneOldCPU</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_Scale>0.8</ProcessorParameters_Scale>
+      <ProcessorParameters_RotationX>-90</ProcessorParameters_RotationX>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\LowRes\OneOldCPULowRes.fbx">
+      <Name>OneOldCPULowRes</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_Scale>0.8</ProcessorParameters_Scale>
+      <ProcessorParameters_RotationX>-90</ProcessorParameters_RotationX>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\HighRes\ProgrammingDesk.fbx">
+      <Name>ProgrammingDesk</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_Scale>1.5</ProcessorParameters_Scale>
+      <ProcessorParameters_RotationX>-90</ProcessorParameters_RotationX>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\LowRes\ProgrammingDeskLowRes.fbx">
+      <Name>ProgrammingDeskLowRes</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_Scale>1.5</ProcessorParameters_Scale>
+      <ProcessorParameters_RotationX>-90</ProcessorParameters_RotationX>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\LowRes\SimpleTeachDeskLowRes.fbx">
+      <Name>SimpleTeachDeskLowRes</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_Scale>1.2</ProcessorParameters_Scale>
+      <ProcessorParameters_RotationX>-90</ProcessorParameters_RotationX>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\HighRes\SimpleTeachDesk.fbx">
+      <Name>SimpleTeachDesk</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_RotationX>-90</ProcessorParameters_RotationX>
+      <ProcessorParameters_Scale>1.2</ProcessorParameters_Scale>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\HighRes\ComputerFileCabnet.fbx">
+      <Name>ComputerFileCabnet</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_Scale>2</ProcessorParameters_Scale>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\LowRes\ComputerFileCabnetLowRes.fbx">
+      <Name>ComputerFileCabnetLowRes</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_Scale>2</ProcessorParameters_Scale>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\LowRes\BlueFileCabnetLowRes.fbx">
+      <Name>BlueFileCabnetLowRes</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_Scale>2</ProcessorParameters_Scale>
+      <ProcessorParameters_RotationX>270</ProcessorParameters_RotationX>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\HighRes\BlueFileCabnet.fbx">
+      <Name>BlueFileCabnet</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_Scale>2</ProcessorParameters_Scale>
+      <ProcessorParameters_RotationX>270</ProcessorParameters_RotationX>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\LowRes\RoundTableLowRes.fbx">
+      <Name>RoundTableLowRes</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_RotationX>-90</ProcessorParameters_RotationX>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\HighRes\RoundTable.fbx">
+      <Name>RoundTable</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_RotationX>-90</ProcessorParameters_RotationX>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Effects\Ambient.fx">
+      <Name>Ambient</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\LowRes\Light.fbx">
+      <Name>LightLowRes</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\HighRes\BookShelf.fbx">
+      <Name>BookShelf</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_Scale>0.75</ProcessorParameters_Scale>
+      <ProcessorParameters_RotationX>-90</ProcessorParameters_RotationX>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\LowRes\BookShelfLowRes.fbx">
+      <Name>BookShelfLowRes</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_RotationZ>-90</ProcessorParameters_RotationZ>
+      <ProcessorParameters_Scale>0.75</ProcessorParameters_Scale>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\HighRes\newchairv2.fbx">
+      <Name>newchairv2</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_RotationX>-90</ProcessorParameters_RotationX>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\LowRes\newchairv2LowRes.fbx">
+      <Name>newchairv2LowRes</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_RotationX>-90</ProcessorParameters_RotationX>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\HighRes\toiletv2.fbx">
+      <Name>toiletv2</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_RotationX>-90</ProcessorParameters_RotationX>
+      <ProcessorParameters_Scale>0.75</ProcessorParameters_Scale>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\LowRes\toiletv2LowRes.fbx">
+      <Name>toiletv2LowRes</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_RotationX>-90</ProcessorParameters_RotationX>
+      <ProcessorParameters_Scale>0.75</ProcessorParameters_Scale>
+      <ProcessorParameters_ResizeTexturesToPowerOfTwo>True</ProcessorParameters_ResizeTexturesToPowerOfTwo>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\HighRes\smartboardv2.fbx">
+      <Name>smartboardv2</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_RotationX>-90</ProcessorParameters_RotationX>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\LowRes\smartboardv2LowRes.fbx">
+      <Name>smartboardv2LowRes</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_RotationX>-90</ProcessorParameters_RotationX>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\LowRes\Claptrap_Robot_ColorLowRes.fbx">
+      <Name>Claptrap_Robot_ColorLowRes</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\HighRes\Claptrap_Robot_Color.fbx">
+      <Name>Claptrap_Robot_Color</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\HighRes\umad.fbx">
+      <Name>umad</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_RotationX>-90</ProcessorParameters_RotationX>
+      <ProcessorParameters_Scale>10</ProcessorParameters_Scale>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\LowRes\umadLowRes.fbx">
+      <Name>umadLowRes</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CollisionProcessor_v2</Processor>
+      <ProcessorParameters_CollisionArg>Box</ProcessorParameters_CollisionArg>
+      <ProcessorParameters_RotationX>-90</ProcessorParameters_RotationX>
+      <ProcessorParameters_Scale>10</ProcessorParameters_Scale>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />
+  <!--  To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

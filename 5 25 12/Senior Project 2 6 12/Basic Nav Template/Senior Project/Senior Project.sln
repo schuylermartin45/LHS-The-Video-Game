@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Senior Project", "Senior Project\Senior Project\Senior Project.csproj", "{4252DD1E-C6F5-4A8C-BC3A-B9B5151A5AEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Senior ProjectContent", "Senior Project\Senior ProjectContent\Senior ProjectContent.contentproj", "{385C61CB-BCE1-4D61-8563-CEE270073D07}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomContentPipeline", "CustomContentPipeline\CustomContentPipeline.csproj", "{3C6D0889-172D-42F8-A67B-20DBA2F197BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTypes", "..\DataTypes\DataTypes\DataTypes.csproj", "{EA9C05C0-ED99-49EA-B43A-18766304C403}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameGUI", "..\Game GUI\GameGUI\GameGUI\GameGUI.csproj", "{4B4A2C6F-BAFF-4289-8539-38BF9ABF489E}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupInstaller", "SetupInstaller\SetupInstaller.vdproj", "{CC94DD59-BD25-4CC0-9596-3B630419FB27}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4252DD1E-C6F5-4A8C-BC3A-B9B5151A5AEE}.Debug|x86.ActiveCfg = Release|x86
+		{4252DD1E-C6F5-4A8C-BC3A-B9B5151A5AEE}.Debug|x86.Build.0 = Release|x86
+		{4252DD1E-C6F5-4A8C-BC3A-B9B5151A5AEE}.Release|x86.ActiveCfg = Release|x86
+		{4252DD1E-C6F5-4A8C-BC3A-B9B5151A5AEE}.Release|x86.Build.0 = Release|x86
+		{385C61CB-BCE1-4D61-8563-CEE270073D07}.Debug|x86.ActiveCfg = Debug|x86
+		{385C61CB-BCE1-4D61-8563-CEE270073D07}.Release|x86.ActiveCfg = Release|x86
+		{3C6D0889-172D-42F8-A67B-20DBA2F197BE}.Debug|x86.ActiveCfg = Debug|x86
+		{3C6D0889-172D-42F8-A67B-20DBA2F197BE}.Debug|x86.Build.0 = Debug|x86
+		{3C6D0889-172D-42F8-A67B-20DBA2F197BE}.Release|x86.ActiveCfg = Debug|x86
+		{3C6D0889-172D-42F8-A67B-20DBA2F197BE}.Release|x86.Build.0 = Debug|x86
+		{EA9C05C0-ED99-49EA-B43A-18766304C403}.Debug|x86.ActiveCfg = Debug|x86
+		{EA9C05C0-ED99-49EA-B43A-18766304C403}.Debug|x86.Build.0 = Debug|x86
+		{EA9C05C0-ED99-49EA-B43A-18766304C403}.Release|x86.ActiveCfg = Debug|x86
+		{EA9C05C0-ED99-49EA-B43A-18766304C403}.Release|x86.Build.0 = Debug|x86
+		{4B4A2C6F-BAFF-4289-8539-38BF9ABF489E}.Debug|x86.ActiveCfg = Release|x86
+		{4B4A2C6F-BAFF-4289-8539-38BF9ABF489E}.Debug|x86.Build.0 = Release|x86
+		{4B4A2C6F-BAFF-4289-8539-38BF9ABF489E}.Release|x86.ActiveCfg = Release|x86
+		{4B4A2C6F-BAFF-4289-8539-38BF9ABF489E}.Release|x86.Build.0 = Release|x86
+		{CC94DD59-BD25-4CC0-9596-3B630419FB27}.Debug|x86.ActiveCfg = Release
+		{CC94DD59-BD25-4CC0-9596-3B630419FB27}.Debug|x86.Build.0 = Release
+		{CC94DD59-BD25-4CC0-9596-3B630419FB27}.Release|x86.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
